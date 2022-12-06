@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-function App() {
+import { Footer, Header } from './features/ui'
+import {
+  AboutUs,
+  Explore,
+  ForgotPassword,
+  Item,
+  ItemList,
+  Signin,
+  Services,
+  Signup,
+  CreateListing,
+  Profile,
+} from './pages'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Explore />} />
+        <Route path='/sign-up' element={<Signup />} />
+        <Route path='/sign-in' element={<Signin />} />
+        <Route path='/add-listing' element={<CreateListing />} />
+        {/* <Route path='/profile' element={<PrivateRoute />}> */}
+        <Route path='/profile' element={<Profile />} />
+        {/* </Route> */}
+        <Route path='/services' element={<Services />} />
+        <Route path='/about-us' element={<AboutUs />} />
+        <Route path='/forgot-password' element={<ForgotPassword />} />
+        <Route path='/category/:catName' element={<ItemList />} />
+        <Route path='/category/:catName/:id' element={<Item />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

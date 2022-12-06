@@ -1,0 +1,29 @@
+.nav-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-name {
+  color: #777;
+}
+
+.active {
+  color: var(--color-primary-accent);
+}
+
+.invisible {
+  display: none;
+}
+
+/*iPads, Tablets*/
+@media (max-width: 768px) {
+  .nav-menu {
+    flex: 1;
+    height: 100%;
+    justify-content: center;
+  }
+  .nav-menu.active-bg {
+    background-color: #ffffffcd;
+  }
+}

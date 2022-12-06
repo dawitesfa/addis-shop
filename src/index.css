@@ -1,13 +1,110 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --color-primary: #b83b5e;
+  --color-primary-light: #f08a5d;
+  --color-primary-dark: #6a2c70;
+  --color-primary-accent: #6a2c70;
+  --color-primary-accent-faded: #6a2c70c0;
+  /* --color-primary-accent: #f9ed69; */
+
+  --color-primary-text: #777;
+  --color-primary-text-light: #333;
+  --color-primary-text-dark-faded: #ffffffb6;
+  --color-primary-text-dark: #fff;
+
+  --color-primary-bg-light: #eeeeee;
+  --color-primary-bg-dark: #222831;
+
+  --color-gray-1: #d8d8d8;
+  --color-gray-2: #8d8b8b;
+  --color-gray-3: #f7f7f7;
+}
+main,
+button,
+html,
+body,
+header,
+div,
+nav,
+ul,
+li,
+a,
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+label,
+img,
+svg,
+select {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: transparent;
+  vertical-align: baseline;
+  outline: none;
+  border: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: 'Lato', sans-serif;
+  color: var(--color-primary-text-light);
+  background: linear-gradient(#baccdada, white);
+}
+
+.main {
+  min-height: 95vh;
+  margin-top: 5.2rem;
+}
+
+.center-content {
+  position: relative;
+  text-align: center;
+}
+
+.margin-bottom-sec {
+  margin-bottom: 4rem;
+}
+
+/**
+  * 320px — 480px: Mobile devices
+  * 481px — 768px: iPads, Tablets
+  * 769px — 1024px: Small screens, laptops
+  * 1025px — 1200px: Desktops, large screens
+  * 1201px and more —  Extra large screens, TV
+**/
+/*Desktops, large screens*/
+@media (max-width: 1200px) {
+}
+/*Small screens, laptops*/
+@media (max-width: 1024px) {
+}
+/*iPads, Tablets*/
+@media (max-width: 768px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/*Mobile devices*/
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/*Extra large screens, TV*/
+@media (min-width: 1200px) {
 }
